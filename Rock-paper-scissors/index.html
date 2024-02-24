@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Papers Sciccors</title>
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/game-start.css">
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="css/picks.css">
+        <link rel="stylesheet" href="css/result.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title-score">
+                <div class="game-name">
+                    <img class="logo" src="img/logo.svg">
+                </div>
+                <div class="score">
+                    <div class="score-label">S C O R E</div>
+                    <div id="score" class="total-score">0</div>
+                </div>
+            </div>
+
+            <div id="actions" class="actions-container">
+                <img class="background-triangle" src="img/bg-triangle.svg">
+                <img onclick="startGame('paper')" id="action" class="action paper" src="img/icon-paper.svg" alt="">
+                <img onclick="startGame('scissors')" id="action" class="action scissor" src="img/icon-scissors.svg" alt="">
+                <img onclick="startGame('rock')" id="action" class="action rock" src="img/icon-rock.svg">
+            </div>
+
+            <div class="rules">
+                <button onclick="openModal()" class="rules-button">RULES</button>
+            </div>
+
+            <div class="rules-popup" id="popup">
+                <div class="popup-content">
+                    <div class="popup-heading">
+                        <div class="rules-heading">RULES</div>
+                        <span onclick="closeModal()" class="close-popup" id="close">X</span>
+                    </div>
+                    <div class="rules-img-container">
+                        <img class="rules-img" src="img/image-rules.svg">
+                    </div>
+                </div>
+            </div>
+
+            <div id="picks" class="picks-container">
+                <div class="picks-label">
+                    <div class="player-label">YOU PICKED</div>
+                    <div class="computer-label">THE HOUSE PICKED</div>
+                </div>
+                <div id="show-picks" class="show-picks">
+                    <div id="player-pick"></div>
+                    <div id="loader" class="loader-container">
+                        <div class="loader"></div>
+                    </div>
+                    <div id="computer-pick"></div>
+                </div>
+
+                <div id="result" class="show-picks">
+                    <div id="player-pick-result"></div>
+                    <div class="result-container">
+                        <div id="final-result" class="result">YOU WIN</div>
+                        <button onclick="restartGame()" class="restart">PLAY AGAIN</button>
+                    </div>
+                    <div id="computer-pick-result"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

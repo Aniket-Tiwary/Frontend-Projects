@@ -1,0 +1,82 @@
+.picks-container{
+    display: none;
+    margin-top: 70px;
+    height: 300px;
+    width: 500px;
+    flex-direction: column;
+}
+
+.picks-label{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.player-label{
+    margin-left: 40px;
+}
+
+.computer-label{
+    margin-right: 40px;
+}
+
+.show-picks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pick{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    padding: 28px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 10px 0px 0px 20px;
+    border-width: 20px; 
+    border-style: solid ;    
+}
+
+.paper-pick{
+    border-color:hsl(230, 89%, 62%);
+}
+
+.rock-pick{
+    border-color: hsl(349, 71%, 52%);
+}
+
+.scissors-pick{
+    border-color: hsl(39, 89%, 49%);;
+}
+
+.loader-container {
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle,hsl(237, 49%, 15%),hsl(214, 47%, 23%));
+    animation: fadeAnimation 2s infinite alternate;
+}
+
+@keyframes fadeAnimation {
+0% {
+    background: radial-gradient(circle,hsl(237, 49%, 15%),hsl(214, 47%, 23%));
+}
+100% {
+    background: radial-gradient(circle,hsl(237, 49%, 15%),hsl(214, 47%, 23%));
+}
+}
+
+#computer-pick{
+    margin-right: 20px;
+}

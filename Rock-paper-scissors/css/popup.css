@@ -1,0 +1,46 @@
+.rules-popup{
+    display: none;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.popup-content{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px 0px 35px;
+    font-size: 24px;
+}
+
+.rules-heading{
+    font-weight: 600;
+}
+
+.close-popup{
+    color: gray;
+    cursor: pointer;
+}
+
+.rules-img-container{
+    display: flex;
+    justify-content: center;
+}
+
+.rules-img{
+    margin-top: 20px;
+    height: 230px;
+    width: 230px;
+    object-fit: contain;
+}

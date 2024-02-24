@@ -1,0 +1,37 @@
+#result{
+    display: none;
+}
+
+.result-container{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.restart{
+    margin-top: 5px;
+    background-color: white;
+    color: hsl(349, 71%, 52%);
+    border: none;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    padding: 5px 50px;
+    height: 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    opacity: 1;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.restart:hover{
+    opacity: 0.8;
+}
