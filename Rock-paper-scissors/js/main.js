@@ -1,6 +1,20 @@
 let wins = 0;
 let moveSelected;
 
+const initElements = () => {
+
+  // set the width
+  document.getElementById('picks').style.width = '500px';
+
+  // set width, disable picks, show-picks and result
+  document.getElementById('picks').style.display = 'none';
+
+  document.getElementById('computer-pick').style.display = 'none';
+
+  document.getElementById('result').style.display = 'none';
+
+}
+
 const openModal = () => {
   document.getElementById('popup').style.display = 'flex';
 }
@@ -55,6 +69,7 @@ const setPlayerPick = (selectedMove,postResult) => {
 const setComputerPick = (computerPick,postResult) => {
   const computerPickHTML = `<img id="${computerPick}" class="pick ${computerPick}-pick" src="img/icon-${computerPick}.svg">` 
   const pickId = postResult ? 'computer-pick-result' : 'computer-pick';
+  document.getElementById(pickId).style.display = 'flex';
   document.getElementById(pickId).innerHTML = computerPickHTML;
 }
 
@@ -85,6 +100,9 @@ const showResult = (selectedMove,computerPick) => {
 }
 
 const showMove = (selectedMove,computerPick) => {
+
+  initElements();
+
   setTimeout(() => {
     document.getElementById('loader').style.display = 'none';
     setComputerPick(computerPick,false);
@@ -98,11 +116,10 @@ const showMove = (selectedMove,computerPick) => {
   // show picks container
   document.getElementById('picks').style.display = 'flex';
 
-  // set the width
-  document.getElementById('picks').style.width = '500px';
-
   // show picks container
   document.getElementById('show-picks').style.display = 'flex';
+
+  document.getElementById('loader').style.display = 'flex';
 
   setPlayerPick(selectedMove,false);
 
