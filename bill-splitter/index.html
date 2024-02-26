@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tip Calculator</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="splitter-container">
+            <div class="heading">
+                <img src="img/logo.svg" alt="splitter-logo">
+            </div>
+            <div class="splitter">
+                <div class="inputs">
+                    <div>
+                        <div class="label">Bill</div>
+                        <div class="input-container">
+                            <img src="img/icon-dollar.svg">
+                            <input id="bill-amount" type="text" placeholder="0">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="label">Select tip %</div>
+                        <div class="tip-percent">
+                            <div class="percent">
+                                <button onclick="setPercent(5)">5%</button>
+                                <button onclick="setPercent(10)">10%</button>
+                                <button onclick="setPercent(15)">15%</button>
+                            </div>
+                            <div class="percent">
+                                <button onclick="setPercent(25)">25%</button>
+                                <button onclick="setPercent(50)">50%</button>
+                                <input type="text" placeholder="Custom" id="percent-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="label">Number of People</div>
+                        <div class="input-container">
+                            <img src="img/icon-person.svg">
+                            <input type="text" placeholder="0" id="people">
+                        </div>
+                    </div>
+                </div>
+                <div class="split-calculator">
+                    <div class="amount-container">
+                        <div class="amount-label">
+                            <div class="total-label">
+                                Tip Amount
+                            </div>
+                            <div class="person-label">
+                                / person
+                            </div>
+                        </div>
+                        <div class="amount" id="total-amount">$0.00</div>
+                    </div>
+                    <div class="amount-container">
+                        <div class="amount-label">
+                            <div class="total-label">
+                                Total
+                            </div>
+                            <div class="person-label">
+                                / person
+                            </div>
+                        </div>
+                        <div class="amount" id="per-person-amount">$0.00</div>
+                    </div>
+                    <button class="reset" onclick="calculateSplit()">CALCULATE</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
